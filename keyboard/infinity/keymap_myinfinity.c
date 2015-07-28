@@ -143,7 +143,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------------------------------------|
      * |     |   |   |   |   |   |   | 4 | 5 | 6 | : | + | * |     |
      * |-----------------------------------------------------------|
-     * |      |   |   |   |   |   |   | 1 | 2 | 3 | - |   |        |
+     * |      |   |   |   |   |   |   | 1 | 2 | 3 | - |   |    ent |
      * |-----------------------------------------------------------|
      * |        |   |   |   |   |   |   | 0 | , | . | / |      |   |
      * `-----------------------------------------------------------'
@@ -153,10 +153,10 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [6] = 
     KEYMAP(
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,   7,   8,   9,   0,MINS, EQL,TRNS,TRNS \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,   4,   5,   6,FN10,FN11,FN12,TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,   1,   2,   3,MINS,TRNS,     TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,   0, COM, DOT,SLSH,TRNS,     TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  P7,  P8,  P9,  P0,PMIN,PEQL,TRNS,TRNS \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  P4,  P5,  P6,FN10,PPLS,PAST,TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  P1,  P2,  P3,PMIN,TRNS,     PENT, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  P0,PCMM,PDOT,PSLS,TRNS,     TRNS, \
         TRNS,TRNS,TRNS,          TRNS,                    TRNS,TRNS,TRNS,TRNS,  
 
 
@@ -188,7 +188,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 const uint16_t PROGMEM fn_actions[] = {
     [0] = ACTION_LAYER_TAP_KEY(3, KC_SPC),            // SpaceFN Layer
-    [1] = ACTION_LAYER_TAP_KEY(7, KC_ENTER),          // Numpad layer
+    [1] = ACTION_LAYER_TAP_KEY(7, KC_BSPC),          // Numpad layer
     [2] = ACTION_LAYER_ON(4),                         // Lock SpaceFN
     [3] = ACTION_LAYER_MOMENTARY(7),                  // Layout selection layer
     [4] = ACTION_LAYER_OFF(4),                        // Unlock SpaceFN
@@ -198,7 +198,5 @@ const uint16_t PROGMEM fn_actions[] = {
     [8] = ACTION_DEFAULT_LAYER_SET(0),                // Colemak layout
     [9] = ACTION_LAYER_INVERT(5)                      // Game mode
    [10] = ACTION_MODS_KEY(MOD_LSFT, KC_SCLN)          // Colon
-   [11] = ACTION_MODS_KEY(MOD_LSFT, KC_EQL)           // Plus
-   [12] = ACTION_MODS_KEY(MOD_LSFT, KC_8)             // Asterisk
 };
 
