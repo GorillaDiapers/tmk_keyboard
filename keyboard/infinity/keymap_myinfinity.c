@@ -15,11 +15,11 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-----------------------------------------------------------'
      */
     [0] =
-    KEYMAP(ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, GRV, BSLS, \
-           TAB, Q,   W,   F,   P,   G,   J,   L,   U,   Y,SCLN,   LBRC,RBRC,BSPC, \
-            FN1,A,   R,   S,   T,   D,   H,   N,   E,   I,      O,QUOT,ENT,  \
-           LSFT,Z,   X,   C,   V,   B,   K,   M,   COMM,DOT, SLSH,RSFT,DEL, \
-           LCTL,LGUI,LALT,          FN0,                RALT,RGUI,APP,RCTL),
+    KEYMAP(ESC ,   1,   2,   3,   4,   5,   6,   7,   8,   9,   0,MINS,EQL , GRV, BSLS, \
+           TAB ,   Q,   W,   F,   P,   G,   J,   L,   U,   Y,SCLN,LBRC,RBRC,BSPC, \
+           FN1 ,   A,   R,   S,   T,   D,   H,   N,   E,   I,   O,QUOT,      ENT,  \
+           LSFT,   Z,   X,   C,   V,   B,   K,   M,COMM,DOT ,SLSH,     RSFT, DEL, \
+           LCTL,LGUI,LALT,               FN0,                RALT,RGUI,APP ,RCTL),
 
     /* Layer 1: QWERTY
      * ,-----------------------------------------------------------.
@@ -35,11 +35,11 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-----------------------------------------------------------'
      */
     [1] =
-    KEYMAP(ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, GRV,BSLS, \
-           TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSPC, \
-           CAPS,A,   S,   D,   F,   G,   H,   J,   K,   L,   SCLN,QUOT,ENT,  \
-           LSFT,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT, SLSH,RSFT,DEL, \
-           LCTL,LGUI,LALT,          FN0,                RALT,RGUI,APP,RCTL),
+    KEYMAP(ESC ,   1,   2,   3,   4,   5,   6,   7,   8,   9,   0,MINS,EQL, GRV,BSLS, \
+           TAB ,   Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,LBRC,RBRC,BSPC, \
+           CAPS,   A,   S,   D,   F,   G,   H,   J,   K,   L,SCLN,QUOT,      ENT,  \
+           LSFT,   Z,   X,   C,   V,   B,   N,   M,COMM,DOT ,SLSH,     RSFT, DEL, \
+           LCTL,LGUI,LALT,              FN0,                 RALT,RGUI, APP,RCTL),
 
  
  /* 2: Disable Win keys */
@@ -48,7 +48,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS,TRNS, \
         TRNS,  NO,TRNS,          TRNS,                    TRNS,  NO,TRNS,TRNS),  
 
 
@@ -69,9 +69,9 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [3] = 
     KEYMAP(TRNS, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12,TRNS,INS,   \
            TRNS,TRNS,BTN1,MS_U,BTN2,TRNS,TRNS,HOME,  UP, END,PSCR,SLCK,PAUS, DEL,      \
-           BSPC,TRNS,MS_L,MS_D,MS_R,TRNS,PGUP,LEFT,DOWN,RGHT,VOLD,VOLU,MUTE,            \
-           TRNS,TRNS,TRNS,TRNS,TRNS, SPC,PGDN,TRNS,MPRV,MNXT,MPLY,TRNS,TRNS,            \
-           TRNS,TRNS,TRNS,          TRNS,               TRNS,TRNS, FN2, FN3),
+           BSPC,TRNS,MS_L,MS_D,MS_R,TRNS,PGUP,LEFT,DOWN,RGHT,VOLD,VOLU,     MUTE,            \
+           TRNS,TRNS,TRNS,TRNS,TRNS, SPC,PGDN,TRNS,MPRV,MNXT,MPLY,     TRNS,TRNS,            \
+           TRNS,TRNS,TRNS,              TRNS,                TRNS,TRNS, FN2, FN3),
 
  /* Layer 4: LOCKED SPACEFN
      * ,-----------------------------------------------------------.
@@ -89,9 +89,9 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [4] = 
     KEYMAP(TRNS, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12,TRNS,INS,   \
            TRNS,TRNS,BTN1,MS_U,BTN2,TRNS,TRNS,HOME,  UP, END,PSCR,SLCK,PAUS, DEL,      \
-           BSPC,TRNS,MS_L,MS_D,MS_R,TRNS,PGUP,LEFT,DOWN,RGHT,VOLD,VOLU,MUTE,            \
-           TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,PGDN,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,            \
-           TRNS,TRNS,TRNS,           SPC,               TRNS,TRNS, FN4,TRNS),
+           BSPC,TRNS,MS_L,MS_D,MS_R,TRNS,PGUP,LEFT,DOWN,RGHT,VOLD,VOLU,     MUTE,            \
+           TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,PGDN,TRNS,MPRV,MNXT,MPLY,     TRNS,TRNS,            \
+           TRNS,TRNS,TRNS,              SPC,                 TRNS,TRNS, FN4,TRNS),
  
 
 
@@ -114,7 +114,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         CAPS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  UP,      FN5, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,       UP,FN5 , \
         TRNS,TRNS,TRNS,           SPC,                    TRNS,LEFT,DOWN,RGHT,  
 
  /* Layer 6: GAME FUNCTIONS
@@ -131,11 +131,11 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-----------------------------------------------------------'
      */ 
     [6] = 
-    KEYMAP(TRNS, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12,TRNS,INS,   \
+    KEYMAP(TRNS,  F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12,TRNS,INS,   \
            TRNS, FN4,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,PSCR,SLCK,PAUS, DEL,      \
-            FN3,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,VOLD,VOLU,MUTE,            \
-           TRNS,TRNS,TRNS,TRNS,TRNS, SPC,PGDN,TRNS,MPRV,MNXT,MPLY,PGUP,TRNS,            \
-           TRNS, FN6,TRNS,          TRNS,               TRNS,HOME,PGDN, END),
+            FN3,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,VOLD,VOLU,     MUTE,            \
+           TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,MPRV,MNXT,MPLY,     PGUP,TRNS,            \
+           TRNS, FN6,TRNS,             TRNS,                 TRNS,HOME,PGDN, END),
  
  /* Layer 7: numlock
      * ,-----------------------------------------------------------.
@@ -156,7 +156,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  P7,  P8,  P9,  P0,PMIN,PEQL,TRNS,TRNS, \
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  P4,  P5,  P6,FN10,PPLS,PAST,TRNS, \
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  P1,  P2,  P3,PMIN,TRNS,     PENT, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  P0,PCMM,PDOT,PSLS,TRNS,     TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  P0,PCMM,PDOT,PSLS,     TRNS,TRNS, \
         TRNS,TRNS,TRNS,          TRNS,                    TRNS,TRNS,TRNS,TRNS,  
 
 
@@ -180,7 +180,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         TRNS, FN7, FN8,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         TRNS, FN9,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
-        TRNS,CAPS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
+        TRNS,CAPS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS,TRNS, \
         TRNS, FN6,TRNS,          TRNS,                    TRNS,TRNS,TRNS,TRNS),  
 
 
@@ -188,15 +188,15 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 const uint16_t PROGMEM fn_actions[] = {
     [0] = ACTION_LAYER_TAP_KEY(3, KC_SPC),            // SpaceFN Layer
-    [1] = ACTION_LAYER_TAP_KEY(7, KC_BSPC),          // Numpad layer
+    [1] = ACTION_LAYER_TAP_KEY(7, KC_BSPC),           // Numpad layer
     [2] = ACTION_LAYER_ON(4),                         // Lock SpaceFN
     [3] = ACTION_LAYER_MOMENTARY(7),                  // Layout selection layer
     [4] = ACTION_LAYER_OFF(4),                        // Unlock SpaceFN
     [5] = ACTION_LAYER_MOMENTARY(6),                  // Game function layer
-    [6] = ACTION_LAYER_INVERT(2)                      // Lock Win keys
+    [6] = ACTION_LAYER_INVERT(2),                     // Lock Win keys
     [7] = ACTION_DEFAULT_LAYER_SET(1),                // QWERTY layout
     [8] = ACTION_DEFAULT_LAYER_SET(0),                // Colemak layout
-    [9] = ACTION_LAYER_INVERT(5)                      // Game mode
-   [10] = ACTION_MODS_KEY(MOD_LSFT, KC_SCLN)          // Colon
+    [9] = ACTION_LAYER_INVERT(5),                     // Game mode
+   [10] = ACTION_MODS_KEY(MOD_LSFT, KC_SCLN),         // Colon
 };
 
