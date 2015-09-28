@@ -42,6 +42,45 @@
 #define LED_TX_TOGGLE
 #endif
 
+<<<<<<< HEAD
+=======
+
+/* LED ping configuration */
+#define TMK_LED
+//#define LEONARDO_LED
+#if defined(TMK_LED)
+// For TMK converter and Teensy
+#define LED_TX_INIT    (DDRD  |=  (1<<6))
+#define LED_TX_ON      (PORTD |=  (1<<6))
+#define LED_TX_OFF     (PORTD &= ~(1<<6))
+#define LED_TX_TOGGLE  (PORTD ^=  (1<<6))
+#elif defined(LEONARDO_LED)
+// For Leonardo(TX LED)
+#define LED_TX_INIT    (DDRD  |=  (1<<5))
+#define LED_TX_ON      (PORTD &= ~(1<<5))
+#define LED_TX_OFF     (PORTD |=  (1<<5))
+#define LED_TX_TOGGLE  (PORTD ^=  (1<<5))
+#else
+#define LED_TX_INIT
+#define LED_TX_ON
+#define LED_TX_OFF
+#define LED_TX_TOGGLE
+#endif
+
+
+static USB     usb_host;
+static HIDBoot<HID_PROTOCOL_KEYBOARD>    kbd(&usb_host);
+static KBDReportParser kbd_parser;
+static USBHub hub1(&usb_host);  // one hub is enough for HHKB pro2
+/* may be needed  for other device with more hub
+static USBHub hub2(&usb_host);
+static USBHub hub3(&usb_host);
+static USBHub hub4(&usb_host);
+static USBHub hub5(&usb_host);
+static USBHub hub6(&usb_host);
+static USBHub hub7(&usb_host);
+*/
+>>>>>>> upstream/master
 
 static void LUFA_setup(void)
 {
@@ -75,7 +114,17 @@ KBDReportParser kbd_parser;
 
 void led_set(uint8_t usb_led)
 {
+<<<<<<< HEAD
     kbd.SetReport(0, 0, 2, 0, 1, &usb_led);
+=======
+    if (usb_host.Init() == -1) {
+        LED_TX_OFF;
+    }
+
+    _delay_ms(200);
+
+    kbd.SetReportParser(0, (HIDReportParser*)&kbd_parser);
+>>>>>>> upstream/master
 }
 
 
@@ -87,17 +136,24 @@ int main(void)
     LED_TX_ON;
 
     debug_enable = true;
+<<<<<<< HEAD
     debug_keyboard = true;
+=======
+>>>>>>> upstream/master
 
     host_set_driver(&lufa_driver);
     keyboard_init();
 
     LUFA_setup();
+<<<<<<< HEAD
 
     // USB Host Shield setup
     usb_host.Init();
     kbd.SetReportParser(0, (HIDReportParser*)&kbd_parser);
 
+=======
+    HID_setup();
+>>>>>>> upstream/master
     /* NOTE: Don't insert time consuming job here.
      * It'll cause unclear initialization failure when DFU reset(worm start).
      */

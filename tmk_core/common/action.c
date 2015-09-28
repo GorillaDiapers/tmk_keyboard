@@ -26,6 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "action_macro.h"
 #include "action_util.h"
 #include "action.h"
+#include "keymap.h"
 
 #ifdef DEBUG_ACTION
 #include "debug.h"
@@ -325,6 +326,42 @@ void process_action(keyrecord_t *record)
             break;
 #endif
         case ACT_COMMAND:
+            switch (action.command.opt) {
+                case AC_CHANGE_SEND_MODE:
+                   if (event.pressed) {
+                        host_system_send(CHANGE_SEND_MODE);
+                    } else {
+                        host_system_send(DONT_SEND_REPORT);
+                    }
+                    break;
+                case AC_CHANGE_BLE_NAME:
+                    if (event.pressed) {
+                        host_system_send(CHANGE_BLE_NAME);
+                    } else {
+                        host_system_send(DONT_SEND_REPORT);
+                    }
+                    break;
+                case AC_PAIRING_BLE:
+                    if (event.pressed) {
+                        host_system_send(PAIRING_BLE);
+                    } else {
+                        host_system_send(DONT_SEND_REPORT);
+                    }
+                    break;
+                 case AC_DISCONT_BLE:
+                    if (event.pressed) {
+                        host_system_send(DISCONT_BLE);
+                    } else {
+                        host_system_send(DONT_SEND_REPORT);
+                    }
+                    break;
+                case NOGUI_TOGGLE:
+                    if (event.pressed){
+                        keymap_config.no_gui = !keymap_config.no_gui;
+                    }
+                    break;
+            }
+
             break;
 #ifndef NO_ACTION_FUNCTION
         case ACT_FUNCTION:
@@ -382,6 +419,12 @@ void register_code(uint8_t code)
 #endif
 
     else if IS_KEY(code) {
+
+#ifdef ACTION_CAPSLOCK_ENABLE
+        if (KC_CAPSLOCK == code) {
+            host_system_send(ACTION_CAPSLOCK);
+        } 
+#endif
         // TODO: should push command_proc out of this block?
         if (command_proc(code)) return;
 
@@ -457,6 +500,12 @@ void unregister_code(uint8_t code)
 #endif
 
     else if IS_KEY(code) {
+        
+#ifdef ACTION_CAPSLOCK_ENABLE
+    if (KC_CAPSLOCK == code) {
+        host_system_send(DONT_SEND_REPORT);
+    } 
+#endif
         del_key(code);
         send_keyboard_report();
     }

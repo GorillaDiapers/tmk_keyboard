@@ -70,7 +70,11 @@ static void enable_break(void)
     print("Enable break: ");
     while (ibm4704_send(0xFC)) { _delay_ms(10); }
     // valid scancode: 00-79h
+<<<<<<< HEAD
     for (uint8_t code = 0; code < 0x7F; code++) {
+=======
+    for (uint8_t code = 0; code < 0x7A; code++) {
+>>>>>>> upstream/master
         while (ibm4704_send(0x80|code)) _delay_ms(10);
         _delay_ms(5);   // wait for response
         // No response(FF) when ok, FD when out of bound

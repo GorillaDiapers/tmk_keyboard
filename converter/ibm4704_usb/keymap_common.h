@@ -114,6 +114,7 @@ extern const uint16_t fn_actions[];
     { KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,   }, \
     { KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,   }, \
     { KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,   }  \
+<<<<<<< HEAD
 }
 
 /* Alps 102-key */
@@ -140,6 +141,8 @@ extern const uint16_t fn_actions[];
     { KC_NO,    KC_NO,    KC_NO,    KC_##K6B, KC_NO,    KC_NO,    KC_NO,    KC_NO,   }, \
     { KC_##K70, KC_##K71, KC_##K72, KC_##K73, KC_##K74, KC_##K75, KC_##K76, KC_##K77 }, \
     { KC_NO,    KC_NO,    KC_NO,    KC_##K7B, KC_NO,    KC_NO,    KC_NO,    KC_NO,   }  \
+=======
+>>>>>>> upstream/master
 }
 
 

@@ -7,7 +7,10 @@ Keyboard initialization process takes a few seconds at start up. During that you
 
 Update
 ------
+<<<<<<< HEAD
 2015/09/07  Added keymap for Alps 102-key. Thanks, tai @ geekhack!
+=======
+>>>>>>> upstream/master
 2015/05/05  Added keymaps for 107-key, 77-key and 50-key. Thanks, orihalcon @ geekhack!
 2015/05/19  Fixed a protocol handling bug.
 
