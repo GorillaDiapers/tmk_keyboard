@@ -37,12 +37,13 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP_ANSI(
     	ESC ,   1,   2,   3,   4,   5,   6,   7,   8,   9,   0,MINS,EQL ,BSPC, \
         TAB ,   Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,LBRC,RBRC,BSLS, \
-         fn1,   A,   S,   D,   F,   G,   H,   J,   K,   L,SCLN,QUOT,     ENT , \
-         LSFT,   Z,   X,   C,   V,   B,   N,   M,COMM,DOT ,SLSH,          RSFT, \
-         LCTL,LGUI,LALT,          FN0,                     RALT,RGUI,APP ,RCTL),
+         FN1,   A,   S,   D,   F,   G,   H,   J,   K,   L,SCLN,QUOT,     ENT , \
+        LSFT,   Z,   X,   C,   V,   B,   N,   M,COMM,DOT ,SLSH,          RSFT, \
+        LCTL,LGUI,LALT,          FN0,                     RALT,RGUI,APP ,RCTL),
 
 		   
-	 /* Layer 2: Disable Win keys */
+	 /* Layer 2: Disable Win keys
+ */
     KEYMAP_ANSI(
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
@@ -69,7 +70,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,BTN1,MS_U,BTN2,TRNS,TRNS,HOME,  UP, END,PSCR,SLCK,PAUS,INS ,  \
         BSPC,TRNS,MS_L,MS_D,MS_R,TRNS,PGUP,LEFT,DOWN,RGHT,VOLD,VOLU,     MUTE,  \
         TRNS,TRNS,TRNS,TRNS,TRNS, SPC,PGDN,TRNS,MPRV,MNXT,MPLY,          TRNS,  \
-        TRNS,TRNS,TRNS,            TRNS,                   fn2,TRNS,TRNS,TRNS),
+        TRNS,TRNS,TRNS,            TRNS,                   FN2,TRNS,TRNS,TRNS),
 	   
 		   
 		   
@@ -87,10 +88,10 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-----------------------------------------------------------'
      */ 
     KEYMAP_ANSI(
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  P7,  P8,  P9,  P0,PMIN,PEQL,TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  P4,  P5,  P6, fn3,PPLS,PAST,TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  P1,  P2,  P3,PMIN,TRNS,     PENT, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  P0,PCMM,PDOT,PSLS,          TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,   7,   8,   9,   0,MINS, EQL,TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,   4,   5,   6, FN3,PPLS,PAST,TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,   1,   2,   3,MINS,TRNS,      ENT, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,   0,COMM, DOT,SLSH,          TRNS, \
         TRNS,TRNS,TRNS,          TRNS,                    TRNS,TRNS,TRNS,TRNS),  
 	   
 	 /* Layer 5: game mode
@@ -111,7 +112,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         CAPS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,            UP, \
-        TRNS,TRNS,TRNS,           SPC,                      fn4,LEFT,DOWN,RGHT),  		
+        TRNS,TRNS,TRNS,           SPC,                      FN4,LEFT,DOWN,RGHT),  		
 		   
  /* Layer 6: GAME FUNCTIONS
      * ,-----------------------------------------------------------.
@@ -131,7 +132,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,  UP,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,PSCR,SLCK,PAUS,INS , \
         TRNS,LEFT,DOWN,RGHT,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,VOLD,VOLU,     MUTE, \
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,MPRV,MNXT,MPLY,          PGUP, \
-        TRNS,TRNS,TRNS,            fn2,                   TRNS,HOME,PGDN, END),
+        TRNS,TRNS,TRNS,            FN2,                   TRNS,HOME,PGDN, END),
 		   
 		   
 /* Layer 7: mode switch
@@ -148,11 +149,11 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-----------------------------------------------------------'
      */ 
     KEYMAP_ANSI(
-        TRNS, fn5, fn6,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
-        TRNS, fn5,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
-        CAPS, fn7,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
-        TRNS,TRNS,TRNS, fn6,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
-        TRNS, fn8,TRNS,          TRNS,                    TRNS,TRNS,TRNS,TRNS),  
+        TRNS, FN5, FN6,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
+        TRNS, FN5,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
+        CAPS, FN7,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
+        TRNS,TRNS,TRNS, FN6,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
+        TRNS, FN8,TRNS,          TRNS,                    TRNS,TRNS,TRNS,TRNS),  
 
 };
 
@@ -167,7 +168,6 @@ const uint16_t PROGMEM fn_actions[] = {
 	[4] = ACTION_LAYER_MOMENTARY(6),            // Game function layer
 	[5] = ACTION_DEFAULT_LAYER_SET(1),          // QWERTY layout
 	[6] = ACTION_DEFAULT_LAYER_SET(0),          // Colemak layout
-	[7] = ACTION_LAYER_INVERT(5),               // Game mode
-	[8] = ACTION_LAYER_INVERT(2),               // Lock Win keys
+	[7] = ACTION_LAYER_INVERT(5, ON_PRESS),               // Game mode
+	[8] = ACTION_LAYER_INVERT(2, ON_PRESS),               // Lock Win keys
 	};
-
