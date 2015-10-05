@@ -51,8 +51,48 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
         TRNS,  NO,TRNS,          TRNS,                    TRNS,  NO,TRNS,TRNS),  
 	   
+	 /* Layer 3: game mode
+     * ,-----------------------------------------------------------.
+     * |   |   |   |   |   |   |   |   |   |   |   |   |   |       |
+     * |-----------------------------------------------------------|
+     * |     |   |   |   |   |   |   |   |   |   |   |   |   |     |
+     * |-----------------------------------------------------------|
+     * | caps |   |   |   |   |   |   |   |   |   |   |   |        |
+     * |-----------------------------------------------------------|
+     * |        |   |   |   |   |   |   |   |   |   |   |    up    |
+     * `-----------------------------------------------------------'
+     * |     |   |     |        space          |  fn | lt|dn |right|
+     * `-----------------------------------------------------------'
+     */ 
+    KEYMAP_ANSI(
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
+        CAPS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,            UP, \
+        TRNS,TRNS,TRNS,           SPC,                      FN4,LEFT,DOWN,RGHT),  		
+
+	 /* Layer 4: arrow keys
+     * ,-----------------------------------------------------------.
+     * |   |   |   |   |   |   |   |   |   |   |   |   |   |       |
+     * |-----------------------------------------------------------|
+     * |     |   |   |   |   |   |   |   |   |   |   |   |   |     |
+     * |-----------------------------------------------------------|
+     * |      |   |   |   |   |   |   |   |   |   |   |   |        |
+     * |-----------------------------------------------------------|
+     * |        |   |   |   |   |   |   |   |   |   |   |    up    |
+     * `-----------------------------------------------------------'
+     * |     |   |     |                       | fn  | lt|dn |right|
+     * `-----------------------------------------------------------'
+     */ 
+    KEYMAP_ANSI(
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
+        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,            UP, \
+        TRNS,TRNS,TRNS,          TRNS,                     TRNS,LEFT,DOWN,RGHT),  		
+
 		   
-	  /* Layer 3: SPACEFN
+	  /* Layer 5: SPACEFN
      * ,-----------------------------------------------------------.
      * | ` | F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|  DEL  |
      * |-----------------------------------------------------------|
@@ -74,7 +114,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	   
 		   
 		   
-	 /* Layer 4: numlock
+	 /* Layer 6: numlock
      * ,-----------------------------------------------------------.
      * |   |   |   |   |   |   |   | 7 | 8 | 9 | 0 | - | = |       |
      * |-----------------------------------------------------------|
@@ -94,27 +134,8 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,   0,COMM, DOT,SLSH,          TRNS, \
         TRNS,TRNS,TRNS,          TRNS,                    TRNS,TRNS,TRNS,TRNS),  
 	   
-	 /* Layer 5: game mode
-     * ,-----------------------------------------------------------.
-     * |   |   |   |   |   |   |   |   |   |   |   |   |   |       |
-     * |-----------------------------------------------------------|
-     * |     |   |   |   |   |   |   |   |   |   |   |   |   |     |
-     * |-----------------------------------------------------------|
-     * | caps |   |   |   |   |   |   |   |   |   |   |   |        |
-     * |-----------------------------------------------------------|
-     * |        |   |   |   |   |   |   |   |   |   |   |    up    |
-     * `-----------------------------------------------------------'
-     * |     |   |     |        space          |  fn | lt|dn |right|
-     * `-----------------------------------------------------------'
-     */ 
-    KEYMAP_ANSI(
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
-        CAPS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
-        TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,            UP, \
-        TRNS,TRNS,TRNS,           SPC,                      FN4,LEFT,DOWN,RGHT),  		
 		   
- /* Layer 6: GAME FUNCTIONS
+ /* Layer 7: GAME FUNCTIONS
      * ,-----------------------------------------------------------.
      * | ` | F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|  DEL  |
      * |-----------------------------------------------------------|
@@ -135,7 +156,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,TRNS,            FN2,                   TRNS,HOME,PGDN, END),
 		   
 		   
-/* Layer 7: mode switch
+/* Layer 8: mode switch
      * ,-----------------------------------------------------------.
      * |   |qwe|col|   |   |   |   |   |   |   |   |   |   |   |   |
      * |-----------------------------------------------------------|
@@ -143,7 +164,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------------------------------------|
      * | Caps |gam|   |   |   |   |   |   |   |   |   |   |        |
      * |-----------------------------------------------------------|
-     * |        |   |   |col|   |   |   |   |   |   |   |          |
+     * |        |aro|   |col|   |   |   |   |   |   |   |          |
      * `-----------------------------------------------------------'
      * |     |lck|     |                       |     |   |   |     |
      * `-----------------------------------------------------------'
@@ -152,7 +173,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS, FN5, FN6,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         TRNS, FN5,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         CAPS, FN7,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
-        TRNS,TRNS,TRNS, FN6,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
+        TRNS, FN9,TRNS, FN6,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
         TRNS, FN8,TRNS,          TRNS,                    TRNS,TRNS,TRNS,TRNS),  
 
 };
@@ -168,6 +189,7 @@ const uint16_t PROGMEM fn_actions[] = {
 	[4] = ACTION_LAYER_MOMENTARY(6),            // Game function layer
 	[5] = ACTION_DEFAULT_LAYER_SET(1),          // QWERTY layout
 	[6] = ACTION_DEFAULT_LAYER_SET(0),          // Colemak layout
-	[7] = ACTION_LAYER_TOGGLE(5),               // Game mode
+	[7] = ACTION_LAYER_TOGGLE(3),               // Game mode
 	[8] = ACTION_LAYER_TOGGLE(2),               // Lock Win keys
+	[8] = ACTION_LAYER_TOGGLE(4),               // Toggle arrow keys
 	};
