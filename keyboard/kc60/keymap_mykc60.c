@@ -168,6 +168,6 @@ const uint16_t PROGMEM fn_actions[] = {
 	[4] = ACTION_LAYER_MOMENTARY(6),            // Game function layer
 	[5] = ACTION_DEFAULT_LAYER_SET(1),          // QWERTY layout
 	[6] = ACTION_DEFAULT_LAYER_SET(0),          // Colemak layout
-	[7] = ACTION_LAYER_INVERT(5, ON_PRESS),               // Game mode
-	[8] = ACTION_LAYER_INVERT(2, ON_PRESS),               // Lock Win keys
+	[7] = ACTION_LAYER_TOGGLE(5),               // Game mode
+	[8] = ACTION_LAYER_TOGGLE(2),               // Lock Win keys
 	};
